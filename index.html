@@ -7,9 +7,28 @@
 </head>
 <body>
     
-<h1 id="myHeader">"Hello World</h1>
+<ul id="foods"></ul>
 
     <script src="http://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
         crossorigin="anonymous"></script>
+
+        <script>
+            // console.log(document.getElementById('myHeader').textContent)
+
+            // innerHTML
+            // $('#myDiv').html('<button>click me</button>')
+
+            // CSS style
+            // $('#myHeader').css('color', 'red')
+
+            const foods = ['pizza', 'hamburger', 'hotdog', 'burrito', 'taco']
+
+            for (let i = 0; i < foods.length; i++) {
+                let foodElem = $('<li>')
+                foodElem.text(foods[i])
+                $('#foods').append(foodElem)
+            }
+
+        </script>
 </body>
 </html>
