@@ -6,9 +6,44 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+    <div id="myDiv"></div>
+
     <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
         crossorigin="anonymous"></script>
+
+    <script>
+
+        const animals = [
+            {
+                Name: 'Cow',
+                Sound: 'Moo'
+            },
+            {
+                Name: 'Cat',
+                Sound: 'Meow'
+            },
+            {
+                Name: 'Dog',
+                Sound: 'Bork'
+            },
+            {
+                Name: 'Racoon',
+                Sound: `The name's Rocket, one of the Guardians of the Galaxy`
+            }
+        ]
+
+        for (let i = 0; i < animals.length; i++) {
+            $('#myDiv').append($(`
+                <button 
+                    class = "animals" 
+                    data-sound = "${animals[i].sound}">
+                    ${animals[i].name} 
+                </button>`))
+        }
+
+
+    </script>
 
 </body>
 </html>
